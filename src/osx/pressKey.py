@@ -25,8 +25,8 @@ def KeyDown(k):
     CGEventPost(kCGHIDEventTap, CGEventCreateKeyboardEvent(None, keyCode, True))
     time.sleep(0.0001)
 
-if shiftKey:
-    CGEventPost(kCGHIDEventTap, CGEventCreateKeyboardEvent(None, 0x38, False))
+    if shiftKey:
+        CGEventPost(kCGHIDEventTap, CGEventCreateKeyboardEvent(None, 0x38, False))
         time.sleep(0.0001)
 
 def KeyUp(k):
@@ -52,8 +52,8 @@ def KeyPress(k):
     CGEventPost(kCGHIDEventTap, CGEventCreateKeyboardEvent(None, keyCode, False))
     time.sleep(0.0001)
 
-if shiftKey:
-    CGEventPost(kCGHIDEventTap, CGEventCreateKeyboardEvent(None, 0x38, False))
+    if shiftKey:
+        CGEventPost(kCGHIDEventTap, CGEventCreateKeyboardEvent(None, 0x38, False))
         time.sleep(0.0001)
 
 
